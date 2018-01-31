@@ -26,11 +26,37 @@ while True:
     with sr.Microphone() as source:
         print("Say something!")
         audio = r.listen(source)
+
     micinput = 0
     micinput = r.recognize_google(audio)
     
     print(micinput)
-    if micinput == ("who is Travis"):
+    if micinput == ("My Singing Monsters"):
+        tts = gTTS(text='HEy i think i have played that game', lang='en')
+        tts.save("msg.mp3")
+        playsound('msg.mp3')
+        os.remove("msg.mp3")
+    if micinput == ("is the cake a lie"):
+        tts = gTTS(text='yes', lang='en')
+        tts.save("yes.mp3")
+        playsound('yes.mp3')
+        os.remove("yes.mp3")
+    elif micinput ==("Braydon says shut up"):
+        tts = gTTS(text='You can never make me be quiet!', lang='en')
+        tts.save("bssu.mp3")
+        playsound('bssu.mp3')
+        os.remove("bssu.mp3")       
+    elif micinput == ("am I dead"):
+        tts = gTTS(text='Are you?', lang='en')
+        tts.save("dead.mp3")
+        playsound('dead.mp3')
+        os.remove("dead.mp3")
+    elif micinput == ("when will the world end"):
+        tts = gTTS(text='when there are no memes', lang='en')
+        tts.save("end.mp3")
+        playsound('end.mp3')
+        os.remove("end.mp3")        
+    elif micinput == ("who is Travis"):
         tts = gTTS(text='Travis is an idiot', lang='en')
         tts.save("travis.mp3")
         playsound('travis.mp3')
