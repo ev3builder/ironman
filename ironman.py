@@ -30,7 +30,12 @@ while True:
     micinput = r.recognize_google(audio)
     
     print(micinput)
-    if micinput == ("what time is it"):
+    if micinput == ("who is Travis"):
+        tts = gTTS(text='Travis is an idiot', lang='en')
+        tts.save("travis.mp3")
+        playsound('travis.mp3')
+        os.remove("travis.mp3")
+    elif micinput == ("what time is it"):
         clock = (time.ctime())
         hour = clock[11:13]
         minute = clock[14:16]
@@ -47,7 +52,7 @@ while True:
         tts.save("PEW.mp3")
         playsound('PEW.mp3')
         os.remove("PEW.mp3")
-    elif micinput == ("shutdown"):
+    elif micinput == ("shut down"):
         print("shutdown")
         tts = gTTS(text='Shuting Down', lang='en')
         tts.save("shutingdown.mp3")
