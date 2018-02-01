@@ -7,7 +7,6 @@ from gtts import gTTS
 from playsound import playsound
 import time
 import os
-
 tts = gTTS(text='Good morning, Sir, What would you like me to do.', lang='en-uk')
 tts.save("good.mp3")
 playsound('good.mp3')
@@ -51,17 +50,14 @@ while True:
             micinput = r.recognize_google(audio)
     except Exception:
         pass
+        waitforinput()
 
     micinput = 0
     micinput = r.recognize_google(audio)
 
     print(micinput)
     print("teststart")
-    if micinput == ("who created you"):
-        tts = gTTS(text='Not noah i can give you that much.', lang='en-uk')
-        tts.save("creator.mp3")
-        playsound('creator.mp3')
-    elif micinput == ("My Singing Monsters"):
+    if micinput == ("My Singing Monsters"):
         tts = gTTS(text='Hey i think i have played that game', lang='en-uk')
         tts.save("msg.mp3")
         playsound('msg.mp3')
@@ -69,7 +65,7 @@ while True:
         tts = gTTS(text='yes', lang='en-uk')
         tts.save("yes.mp3")
         playsound('yes.mp3')
-    elif micinput ==("Braydon says shut up"):
+    elif micinput ==("Bradon says shut up"):
         tts = gTTS(text='You can never make me be quiet!', lang='en-uk')
         tts.save("bssu.mp3")
         playsound('bssu.mp3')
