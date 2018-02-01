@@ -100,6 +100,11 @@ while True:
         tts = gTTS(text='PEW', lang='en-uk')
         tts.save("PEW.mp3")
         playsound('PEW.mp3')
+    elif micinput == ("what's K2"):
+        print("k2")
+        tts = gTTS(text='drug', lang='en-uk')
+        tts.save("k2.mp3")
+        playsound('k2.mp3')
     elif micinput in offlist:
         print("shutdown")
         tts = gTTS(text='Ok sir', lang='en-uk')
