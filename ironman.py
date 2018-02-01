@@ -28,8 +28,8 @@ def waitforinput():
         print(micinput)
         if micinput == ("hey Jarvis"):
             tts = gTTS(text='Yes Sir?', lang='en-uk')
-            tts.save("ysir.mp3")
-            playsound('ysir.mp3')
+            tts.save("./assets/voices_tts/ysir.mp3")
+            playsound('./assets/voices_tts/ysir.mp3')
             break
         
 
@@ -58,28 +58,28 @@ while True:
     print("teststart")
     if micinput == ("My Singing Monsters"):
         tts = gTTS(text='Hey i think i have played that game', lang='en-uk')
-        tts.save("assest/voices_tts/msg.mp3")
-        playsound('assest/voices_tts/msg.mp3')
+        tts.save("./assets/voices_tts/msg.mp3")
+        playsound('./assets/voices_tts/msg.mp3')
     elif micinput == ("is the cake a lie"):
         tts = gTTS(text='yes', lang='en-uk')
-        tts.save("yes.mp3")
-        playsound('yes.mp3')
+        tts.save("./assets/voices_tts/yes.mp3")
+        playsound('./assets/voices_tts/yes.mp3')
     elif micinput ==("Bradon says shut up"):
         tts = gTTS(text='You can never make me be quiet!', lang='en-uk')
-        tts.save("bssu.mp3")
-        playsound('bssu.mp3')
+        tts.save("./assets/voices_tts/bssu.mp3")
+        playsound('./assets/voices_tts/bssu.mp3')
     elif micinput == ("am I dead"):
         tts = gTTS(text='Are you?', lang='en-uk')
-        tts.save("dead.mp3")
-        playsound('dead.mp3')
+        tts.save("./assets/voices_tts/dead.mp3")
+        playsound('./assets/voices_tts/dead.mp3')
     elif micinput == ("when will the world end"):
         tts = gTTS(text='when-uk there are no memes', lang='en-uk')
-        tts.save("end.mp3")
-        playsound('end.mp3')
+        tts.save("./assets/voices_tts/end.mp3")
+        playsound('./assets/voices_tts/end.mp3')
     elif micinput == ("who is Travis"):
         tts = gTTS(text='Travis is an idiot', lang='en-uk')
-        tts.save("travis.mp3")
-        playsound('travis.mp3')
+        tts.save("./assets/voices_tts/travis.mp3")
+        playsound('./assets/voices_tts/travis.mp3')
     elif micinput in timelist:
         clock = (time.ctime())
         hour = clock[11:13]
@@ -88,40 +88,37 @@ while True:
         day = clock[0:3]
         print("time")
         tts = gTTS(text='The time is ' + hour + ' ' + minute + ' ' + day + ' ' + month + ' ' + dayom + '.', lang='en-uk')
-        tts.save("time.mp3")
-        playsound('time.mp3')
+        tts.save("./assets/voices_tts/time.mp3")
+        playsound('./assets/voices_tts/time.mp3')
     elif micinput == ("fire"):
         print("PEW")
-        tts = gTTS(text='PEW', lang='en-uk')
-        tts.save("PEW.mp3")
-        playsound('PEW.mp3')
+        playsound('./assets/sounds_assets/firesound.mp3')
     elif micinput == ("what's K2"):
         print("k2")
         tts = gTTS(text='drug', lang='en-uk')
-        tts.save("k2.mp3")
-        playsound('k2.mp3')
+        tts.save("./assets/voices_tts/k2.mp3")
+        playsound('./assets/voices_tts/k2.mp3')
     elif micinput in offlist:
         print("shutdown")
         tts = gTTS(text='Ok sir', lang='en-uk')
-        tts.save("shutingdown.mp3")
-        playsound('shutingdown.mp3')
+        tts.save("./assets/voices_tts/shutingdown.mp3")
+        playsound('./assets/voices_tts/shutingdown.mp3')
         waitforinput()
     else:
         print("error")
         tts = gTTS(text='I do not understand ' + micinput, lang='en-uk')
-        tts.save("understand.mp3")
-        playsound('understand.mp3')
+        tts.save("./assets/voices_tts/understand.mp3")
+        playsound('./assets/voices_tts/understand.mp3')
         
     try:
         tts = gTTS(text='Is there anything else you would like me to do sir?', lang='en-uk')
-        tts.save("else.mp3")
-        playsound("else.mp3")
-        os.remove("else.mp3")
+        tts.save("./assets/voices_tts/else.mp3")
+        playsound("./assets/voices_tts/else.mp3")
     except Exception:
         try:
             tts = gTTS(text='Is there anything else you would like me to do sir?', lang='en-uk')
-            tts.save("else.mp3")
-            playsound("else.mp3")
+            tts.save("./assets/voices_tts/else.mp3")
+            playsound("./assets/voices_tts/else.mp3")
             
         except Exception:
             pass
@@ -134,12 +131,13 @@ while True:
     try:
         if micinput == 'no' or micinput == 'nope':
             tts = gTTS(text='Ok Sir.', lang='en-uk')
-            tts.save("oksir.mp3")
-            playsound('oksir.mp3')
+            tts.save("./assets/voices_tts/oksir.mp3")
+            playsound('./assets/voices_tts/oksir.mp3')
             waitforinput()
         elif micinput in yeslist:
             tts = gTTS(text='Ok Sir, what would you like to do', lang='en-uk')
-            tts.save("oksir2.mp3")
-            playsound('oksir2.mp3')
+            tts.save("./assets/voices_tts/oksir2.mp3")
+            playsound('./assets/voices_tts/oksir2.mp3')
     except Exception:
         pass
+
