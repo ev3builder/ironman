@@ -8,9 +8,8 @@ from playsound import playsound
 import time
 import os
 tts = gTTS(text='Good morning, Sir, What would you like me to do.', lang='en-uk')
-tts.save("good.mp3")
-playsound('good.mp3')
-os.remove("good.mp3")
+tts.save("./assets/voices_tts/good.mp3")
+playsound('./assets/voices_tts/good.mp3')
 yeslist = ["yes", "Yes", "forward", "Forward", "full impulse", "Full Impulse", "yeah", "yup", "Yup", "yeah"]
 timelist = ['what time is it', 'when is it', 'what is the time', 'what day is it', 'what month is it']
 offlist = ['shut down', 'off', 'no', 'trun off', 'stop', 'nothing']
@@ -59,8 +58,8 @@ while True:
     print("teststart")
     if micinput == ("My Singing Monsters"):
         tts = gTTS(text='Hey i think i have played that game', lang='en-uk')
-        tts.save("msg.mp3")
-        playsound('msg.mp3')
+        tts.save("assest/voices_tts/msg.mp3")
+        playsound('assest/voices_tts/msg.mp3')
     elif micinput == ("is the cake a lie"):
         tts = gTTS(text='yes', lang='en-uk')
         tts.save("yes.mp3")
