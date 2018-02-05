@@ -8,6 +8,7 @@ from playsound import playsound
 import time
 import os
 
+#clean up just a bit
 
 tts = gTTS(text='Good morning, Sir, What would you like me to do.', lang='en-uk')
 tts.save("./assets/voices_tts/good.mp3")
@@ -144,3 +145,6 @@ while True:
             playsound('./assets/voices_tts/oksir2.mp3')
     except Exception:
         pass
+    
+    #Like the idea
+    
