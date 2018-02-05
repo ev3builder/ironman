@@ -1,6 +1,6 @@
-#!/usr/bin/en-ukv python3
 
-# NOTE: this example requires PyAudio because it uses the Microphone class
+
+# NOTE: this requires PyAudio because it uses the Microphone class
 
 import speech_recognition as sr
 from gtts import gTTS
