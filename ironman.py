@@ -7,6 +7,8 @@ from gtts import gTTS
 from playsound import playsound
 import time
 import os
+
+
 tts = gTTS(text='Good morning, Sir, What would you like me to do.', lang='en-uk')
 tts.save("./assets/voices_tts/good.mp3")
 playsound('./assets/voices_tts/good.mp3')
@@ -14,6 +16,8 @@ yeslist = ["yes", "Yes", "forward", "Forward", "full impulse", "Full Impulse", "
 timelist = ['what time is it', 'when is it', 'what is the time', 'what day is it', 'what month is it']
 offlist = ['shut down', 'off', 'no', 'trun off', 'stop', 'nothing']
 # obtain audio from the microphone
+
+
 r = sr.Recognizer()
 micinput = 0
 def waitforinput():
@@ -140,4 +144,3 @@ while True:
             playsound('./assets/voices_tts/oksir2.mp3')
     except Exception:
         pass
-
