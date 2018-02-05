@@ -30,8 +30,8 @@ def waitforinput():
             tts.save("./assets/voices_tts/ysir.mp3")
             playsound('./assets/voices_tts/ysir.mp3')
             break
-        
-
+            
+#clock
 while True:
     clock = (time.ctime())
     hour = clock[11:13]
@@ -52,7 +52,7 @@ while True:
 
     micinput = 0
     micinput = r.recognize_google(audio)
-
+   #start of all responses and talking
     print(micinput)
     print("teststart")
     if micinput == ("My Singing Monsters"):
